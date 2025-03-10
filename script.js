@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const raindropSizeSlider = document.getElementById("raindrop-size");
   const dayNightToggle = document.getElementById("day-night-toggle");
   const rainColorPicker = document.getElementById("rain-color");
-  let numRaindrops = 100;
+  let numRaindrops = 500;
   let raindropBaseSize = 2; // Default base size
   let isNight = false;
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Remove raindrop after animation for performance
     setTimeout(() => {
       raindrop.remove();
-    }, speed * 1000);
+    }, speed * 50000);
   }
 
   // Window droplet creation
