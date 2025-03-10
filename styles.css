@@ -1,0 +1,136 @@
+body {
+  background: #222;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Title styling */
+.title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  text-align: center;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.window {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2c3e50, #34495e);
+  opacity: 0.8;
+  transition: background 5s ease;
+}
+
+.window.night {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+}
+
+.raindrops,
+.droplets {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.raindrop {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  animation: fall linear infinite;
+}
+
+.droplet {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: slideDown 5s linear infinite;
+}
+
+.controls {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.educational-popup {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  max-width: 80%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+    top: 10px;
+  }
+  .controls {
+    top: 50px;
+    left: 5px;
+    font-size: 0.8rem;
+    gap: 5px;
+  }
+  .controls input[type="range"] {
+    width: 100px;
+  }
+  .raindrop {
+    width: 1px;
+    height: 3px;
+  }
+  .droplet {
+    width: 3px;
+    height: 3px;
+  }
+  .educational-popup {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+}
