@@ -4,7 +4,6 @@
 [![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff)](#)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#)
 [![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white)](#)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 A rain simulator.
 
@@ -35,8 +34,9 @@ To contribute:
 - Submit a pull request with a brief explanation of what you’ve added or improved.
 - Whether it’s a bug fix, a new feature, or a customization, all contributions are appreciated!
 
-### License
-This project is licensed under the MIT License.
-
 ### Credits
 Rain draws inspiration from nature.
+
+### License
+Distributed under the GNU Affero General Public License v3.0 License. See `LICENSE` for more information.
+
